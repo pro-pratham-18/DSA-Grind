@@ -2,36 +2,38 @@
 
 #include<iostream>
 #include<vector>
-
 using namespace std;
 
-
-vector <int> Two_sum(vector <int>& v,int target){
+vector <int> two_sum(vector <int>& v,int target){
     int n=v.size();
+    bool found =false;
     int s=0;
     int e=n-1;
     while(s<e){
-        int sum=v[s]+v[e];
+        int sum=v.at(s)+v.at(e);
         if(sum==target){
-            return {s+1,e+1};      // to get element no. wise 
+            found =true;
+            return {s,e};
+            break;
         }
-        else if(sum>target){
-            e--;
-        }
-        else{
+        else if(sum<target){
             s++;
         }
+        else{
+            e--;
+        }
     }
-    return {};
+    if(found==false){
+        cout<<"Not Found"<<endl;
+    }
+    return{-1};
 }
+
 int main(){
-    vector <int> v={2,4,5,7};
-    vector <int > vec =Two_sum(v,12);
-    
-    for(int  i=0;i<vec.size();i++){
-        cout<<vec.at(i)<<endl;
+    vector <int> v={2,5,6,10,12,21,30,34,50};
+    auto x=two_sum(v,103);                     // to make it run check for 44(10+34)
+    for(auto i:x){
+        cout<<i<<endl;
     }
 
-    return 0;
 }
-
