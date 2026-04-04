@@ -1,0 +1,1 @@
+//when the pointer are in a type where left pointer starts from the first position and right pointer from the 2nd position , and they move by doing +1 on both till array end , and if there is no chance of meeting ,then make the while conidtion like r<n to reduce out of bound errors
