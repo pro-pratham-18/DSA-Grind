@@ -1,5 +1,5 @@
 //two pointer approach is used
-//one pointer at start seconde one at the end 
+//one pointer at start second one at the end 
 //while s<e (when told you cant use the same element twice) // general
 
 // if sum less than target , increse left pointer 
