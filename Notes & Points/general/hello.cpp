@@ -15,4 +15,3 @@
 
 //point we have a binary_search in-built function which returns true or false as per the element prsence.
 
-
