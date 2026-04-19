@@ -47,3 +47,17 @@
 
 
 //set work 
+
+
+
+//-------------------------------------------------------------------------------------
+
+// in move zeroes , we basically use two pointer which optimal way to sort all the zeroes to either left or right , (as this is the type of II........, we use m<n inside while , where m is the right pointer)
+// its another variation is color sort , where we sort 0 1 2 using 3 pointersnd start , middle and end. (dutch flag algorithm)
+
+
+//---------------------------------------------------------------------------------------------
+
+// if you make pointer of an array , then it points to the first element by default.
+// increasing pointer value , increases the memmory address by bytes as per the data type of the element inside the array , and it starts pointing to next element such that the pointer now holds the adress of the second element
+//
