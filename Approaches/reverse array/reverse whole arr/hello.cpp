@@ -12,8 +12,8 @@ vector <int> reverse_arr(vector <int>& v){
     int e=n-1;
     while(s<e){                        // prefer s<e to avoid the self swap
         swap(v[s],v[e]);
-        s+=1;
-        e-=1;
+        s++;
+        e--;
     }
     return v;                           // when returning something isnt necessary ,instead of returning v we can make it void as well , then we can use this function to change the actual vector , and then printing the actual vector 
 }
@@ -21,11 +21,9 @@ vector <int> reverse_arr(vector <int>& v){
 int main(){
     vector <int> v={1,2,4,5,6};
     auto x=reverse_arr(v);
-    cout<<"{";
     for(int x:v){
-        cout<<x<<",";
+        cout<<x;
     }
-    cout<<"}";
     return 0;
 }
 
