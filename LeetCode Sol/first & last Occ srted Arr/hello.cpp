@@ -119,7 +119,6 @@ int ith_occ(vector<int>& nums , int target,int occ){
     if(x==-1){
         return -1;
     }
-
     int z=x+occ-1;
     if(z<=y){
         return z;

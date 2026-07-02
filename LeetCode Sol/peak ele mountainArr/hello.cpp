@@ -28,6 +28,9 @@
 // if the peak is not on the ends , then we wont iterate at that places , means we start s from 1 and  from n-2
 // we keep shrinking the search area until end , when only the peak element remains having index as s
 // then we return the s at the end
+// e can also be returned at the end as both will be having same value when the loop ends
+
+// if you did while(s<=e), an infinite loop will run as s and e will get equal and the s=e condition will become kind of always true
 
 
 
