@@ -13,7 +13,7 @@
 //         }
 //     };
 
-//     int cap;
+//     int limit;
 //     unordered_map<int, Node*> mp;
 //     Node* head;
 //     Node* tail;
@@ -36,12 +36,13 @@
 //         nextNode->prev = prevNode;
 //     }
 
-//     void insertAfterHead(Node* node) {
-//         node->next = head->next;
-//         node->prev = head;
+//     void insertAfterHead(Node* newNode) {
+//          Node*next=head->next;
+//          head->next=newNode;
+//          next->prev=newNode;
 
-//         head->next->prev = node;
-//         head->next = node;
+//          newNode->prev=head;
+//          newNode->next=next;
 //     }
 
 //     int get(int key) {
@@ -73,9 +74,8 @@
 //             mp.erase(lru->key);
 //             delete lru;
 //         }
-
 //         Node* newNode = new Node(key, value);
 //         insertAfterHead(newNode);
-//         mp[key] = newNode;
-//     }
+//         mp[key] = newNode;               //insert or emplace can also be used here as we handled the case of already present
+//     } 
 // };

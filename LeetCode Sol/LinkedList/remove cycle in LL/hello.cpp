@@ -21,6 +21,15 @@
 //             return nullptr;
 //         }
 //         slow=head;
+//
+//         if(fast==head){                      //handle the case when the cycle starts at head 
+//         while(fast->next!=slow){
+//             fast=fast->next;
+//         }
+//         fast->next=NULL;
+//         return head;
+// }
+
 //         ListNode*prev=NULL;             // create a prev pointer to store the prev value of fast
 //         while(slow!=fast){
 //             slow=slow->next;
@@ -31,6 +40,3 @@
 //         return head;                   // returning the head means kind of returning the LL after we performed an operation(like we do in an arrray)
 //     }
 // };
-
-
-
