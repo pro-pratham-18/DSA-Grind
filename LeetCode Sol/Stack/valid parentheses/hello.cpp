@@ -1,30 +1,29 @@
-// class Solution {
-// public:
-//     bool isValid(string s) {
-//         stack<char> st;
+// #include<iostream>
+// #include<stack>
 
-//         for (char ch : s) {
+// using namespace std;
 
-//             // Opening brackets
-//             if (ch == '(' || ch == '{' || ch == '[') {
-//                 st.push(ch);
+// bool isValid(string s){
+
+//     stack<int>st;
+//     for(char c : s){
+//         if(c=='(' || c=='{' || c=='['){
+//             st.push(c);
+//         }
+//         else{
+//             if(st.empty()){
+//                 return false;
 //             }
-//             // Closing brackets
-//             else {
-//                 if (st.empty()) {
-//                     return false;
-//                 }
-
-//                 if ((ch == ')' && st.top() != '(') ||
-//                     (ch == '}' && st.top() != '{') ||
-//                     (ch == ']' && st.top() != '[')) {
-//                     return false;
-//                 }
-
+//             if(c==')' && st.top()=='(' || c==']' && st.top()=='[' || c=='}' && st.top()=='{'){
 //                 st.pop();
 //             }
+//             else{
+//                 return false;
+//             }
 //         }
-
-//         return st.empty();
 //     }
-// };
+//     return st.empty();
+// }
+
+
+
