@@ -28,7 +28,7 @@
 //     }
 // };
 
-//implementation
+//implementation using pair 
 
 #include<iostream>
 #include<stack>
@@ -73,3 +73,47 @@ int main(){
 
     return 0;
 }
+
+
+// lc solution ,preferred optimal (using stack only)
+
+
+
+class MinStack {
+public:
+    int minVal;
+    stack<long long >st;
+    MinStack() {
+
+    }
+    void push(int value) {
+        if(st.empty()){
+            st.push(value);
+            minVal=value;
+        }
+        else if(value<minVal){
+            long long val=2LL*value-minVal;
+            st.push(val);
+            minVal=value;
+        }
+        else{
+            st.push(value);
+        }
+    }
+    void pop() {
+        if(st.top()<minVal){
+            minVal=2LL*minVal-st.top();
+        }
+        st.pop();
+    }
+    int top() {
+        if(st.top()<minVal){
+            return minVal;
+        }
+        return st.top();
+    }
+    
+    int getMin() {
+        return minVal;
+    }
+}; 
