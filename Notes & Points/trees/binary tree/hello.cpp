@@ -21,7 +21,6 @@ public:
     Tree(){       //inserting the root Node 
         root=nullptr;
     }
-
     //insert at the left most node
     void insertLeft(int val){
         Node*newNode=new Node(val);
@@ -82,13 +81,31 @@ void preOrder(Node*root){
 
 //level order traversal
 
+void levelOrderTraversal(Node*root){
+    if(root==NULL){
+        return;
+    }
+    queue<Node*>q;
+    q.push(root);
+    while(!q.empty()){
+        Node*curr=q.front();
+        q.pop();
+        cout<<curr->data<<" ";
+        if(curr->left!=NULL){
+            q.push(curr->left);
+        }
+        if(curr->right!=NULL){
+            q.push(curr->right);
+        }
+    }
+}
+
 //level order traversal (with newLine)
 
-
-//height of a binary tree 
-int levOrd_HofTree(Node*root){
-    if(root==NULL)return -1;
-    int height=0;
+void levelOrderTraversal(Node*root){
+    if(root==NULL){
+        return;
+    }
     queue<Node*>q;
     q.push(root);
     q.push(NULL);
@@ -97,7 +114,7 @@ int levOrd_HofTree(Node*root){
         q.pop();
         if(curr==NULL){
             if(!q.empty()){
-                height++;
+                cout<<endl;
                 q.push(NULL);
                 continue;
             }
@@ -105,6 +122,7 @@ int levOrd_HofTree(Node*root){
                 break;
             }
         }
+        cout<<curr->data<<" ";
         if(curr->left!=NULL){
             q.push(curr->left);
         }
@@ -112,11 +130,9 @@ int levOrd_HofTree(Node*root){
             q.push(curr->right);
         }
     }
-    return height;
 }
 int main(){
-    vector <int> nums={1,2,-1,-1,3,4,-1,-1,5,-1,-1};
-    auto it =BuildTree(nums);
-    
-    return 0;
+    vector<int> preorder ={1,2,-1,-1,3,4,-1,-1,5,-1,-1};
+    Node*root=BuildTree(preorder);
+
 }
