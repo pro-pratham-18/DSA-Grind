@@ -34,7 +34,6 @@ public:
             cout<<endl;
         }
     }
-
     // bfs (member function type )
     void bfs(){
         vector<bool>vis(V,false);
