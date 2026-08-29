@@ -8,7 +8,7 @@
 //         vector<vector<int>>dist(n,vector<int>(n,INT_MAX));
 //         dist[0][0]=grid[0][0];
 
-//         vector<vector<int>>dirs={{-1,0},{0,1},{1,0},{0,-1}};  
+//         vector<vector<int>>dirs={{-1,0},{0,1},{1,0},{0,-1}};
 
 //         auto Safe=[&](int i,int j){
 //             return i>=0 && j>=0 && i<n && j<n;
