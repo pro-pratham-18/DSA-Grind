@@ -30,7 +30,7 @@ void merge(vector<int>& nums,int s , int mid,int e,int& count){
         temp.push_back(nums[j]);
         j++;
     }
-
+    
     for(int idx=0;idx<temp.size();idx++){
         nums[s+idx]=temp[idx];
     }
