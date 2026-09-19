@@ -30,3 +30,5 @@ int jump(vector<int>& nums){
 int main(){
     return 0;
 }
+
+
