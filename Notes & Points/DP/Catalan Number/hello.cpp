@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 
-// rrecursion
+// recursion
 
 int cat(int n){
     if(n==0 || n==1) return 1;
